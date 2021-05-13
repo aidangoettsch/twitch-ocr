@@ -10,7 +10,7 @@ def process_image(im):
     print(pytesseract.image_to_string(im))
 
 
-streams = streamlink.streams('https://www.twitch.tv/%s' % streamer)
+streams = streamlink.streams(f'https://www.twitch.tv/{streamer}')
 if streams:
     stream = streams['best']
 
